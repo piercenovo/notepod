@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Notepod",
-  description: "Optimiza tu flujo de trabajo con Notepod, la aplicación SAAS de notas diseñada para simplificar la gestión de tus ideas y proyectos. Donde podrás capturar, organizar y compartir tus notas de manera eficiente.",
+  description: "Optimize your workflow with Notepod, the SAAS note app designed to simplify the management of your ideas and projects. Where you can capture, organize and share your notes efficiently.",
 };
 
 export default function RootLayout({
