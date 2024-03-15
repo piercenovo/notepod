@@ -2,7 +2,7 @@ import { DashboardNav } from '@/components/DashboardNav'
 import { ReactNode } from 'react'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { redirect } from 'next/navigation'
-import { getData } from '@/app/lib/getData'
+import { getUserData } from '@/app/lib/getUserData'
 
 export default async function DashboardLayout({ children } : {children: ReactNode}) {
   const { getUser } = getKindeServerSession()
@@ -12,7 +12,7 @@ export default async function DashboardLayout({ children } : {children: ReactNod
     return redirect('/')
   }
 
-  await getData({
+  await getUserData({
     email: user.email as string,
     firstName: user.given_name as string,
     id: user.id as string,

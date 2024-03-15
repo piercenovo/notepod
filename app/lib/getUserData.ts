@@ -1,6 +1,6 @@
 import prisma from '@/app/lib/db'
 
-export async function getData({
+export async function getUserData({
   email,
   id,
   firstName,
