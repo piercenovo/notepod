@@ -9,7 +9,8 @@ export async function getUserById(userId: string) {
       select: {
         name: true,
         email: true,
-        colorScheme: true
+        colorScheme: true,
+        stripeCustomerId: true
       }
     })
     return user

@@ -1,6 +1,6 @@
 import prisma from '@/app/lib/db'
 import { getUserById } from '@/app/lib/getUserById'
-import SubmitButton from '@/components/SubmitButton'
+import { SubmitButton } from '@/components/SubmitButtons'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -97,7 +97,9 @@ export default async function SettingsPage() {
           </CardContent>
 
           <CardFooter>
-            <SubmitButton />
+            <form>
+              <SubmitButton />
+            </form>
           </CardFooter>
         </form>
       </Card>
