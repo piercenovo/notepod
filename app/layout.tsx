@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-import './globals.css'
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Navbar } from '@/components/Navbar'
-import { getUserById } from './lib/getUserById'
-import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
+import { getUserById } from '@/app/lib/getUserById'
+import '@/app/globals.css'
 
 const poppins = Poppins({
   subsets: ['latin'],

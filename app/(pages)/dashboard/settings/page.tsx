@@ -97,9 +97,7 @@ export default async function SettingsPage() {
           </CardContent>
 
           <CardFooter>
-            <form>
-              <SubmitButton />
-            </form>
+            <SubmitButton />
           </CardFooter>
         </form>
       </Card>

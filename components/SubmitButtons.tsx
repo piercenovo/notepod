@@ -1,8 +1,8 @@
 'use client'
 
 import { useFormStatus } from 'react-dom'
-import { Button } from './ui/button'
-import { Loader2 } from 'lucide-react'
+import { Loader2, Trash } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export function SubmitButton() {
   const { pending } = useFormStatus()
@@ -21,7 +21,7 @@ export function SubmitButton() {
   )
 }
 
-export function SubscriptionCreationButton() {
+export function SubscriptionButton() {
   const { pending } = useFormStatus()
   return (
     <>
@@ -53,6 +53,25 @@ export function PortalButton() {
         : (
           <Button className='w-fit' type='submit'>
             View payment details
+          </Button>
+          )}
+    </>
+  )
+}
+
+export function DeleteButton() {
+  const { pending } = useFormStatus()
+  return (
+    <>
+      {pending
+        ? (
+          <Button variant='destructive' size='icon' type='submit'>
+            <Loader2 className='size-4 animate-spin' />
+          </Button>
+          )
+        : (
+          <Button variant='destructive' size='icon' type='submit'>
+            <Trash className='size-4' />
           </Button>
           )}
     </>

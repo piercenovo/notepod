@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { ThemeToggle } from './ThemeToggle'
-import { Button } from './ui/button'
 import { RegisterLink, LoginLink } from '@kinde-oss/kinde-auth-nextjs/components'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
-import { UserNav } from './UserNav'
+import { ThemeToggle } from '@/components/ThemeToggle'
+import { Button } from '@/components/ui/button'
+import { UserNav } from '@/components/UserNav'
 
 export async function Navbar() {
   const { isAuthenticated, getUser } = getKindeServerSession()

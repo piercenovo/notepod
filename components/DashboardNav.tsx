@@ -1,9 +1,9 @@
 'use client'
 
-import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { navItems } from './UserNav'
+import { cn } from '@/lib/utils'
+import { navItems } from '@/components/UserNav'
 
 export function DashboardNav() {
   const pathname = usePathname()

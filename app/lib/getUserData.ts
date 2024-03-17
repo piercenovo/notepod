@@ -1,5 +1,6 @@
 import prisma from '@/app/lib/db'
-import { stripe } from './stripe'
+import { stripe } from '@/app/lib/stripe'
+import { unstable_noStore as noStore } from 'next/cache'
 
 export async function getUserData({
   email,
@@ -14,6 +15,7 @@ export async function getUserData({
   lastName: string | undefined | null
   profileImage: string | undefined | null
 }) {
+  noStore()
   const user = await prisma.user.findUnique({
     where: {
       id

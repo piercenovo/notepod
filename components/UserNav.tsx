@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { CreditCard, DoorClosed, Home, Settings } from 'lucide-react'
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
-import { Button } from './ui/button'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuGroup,
   DropdownMenuItem
-} from './ui/dropdown-menu'
+} from '@/components/ui/dropdown-menu'
 import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 
 export const navItems = [

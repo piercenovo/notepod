@@ -1,17 +1,17 @@
 import prisma from '@/app/lib/db'
 import { unstable_noStore as noStore } from 'next/cache'
 
-export async function getSubscriptionData(userId: string) {
+export async function getNoteData(userId: string) {
   noStore()
-  const data = await prisma.subscription.findUnique({
+  const data = await prisma.user.findUnique({
     where: {
-      userId
+      id: userId
     },
     select: {
-      status: true,
-      user: {
+      Notes: true,
+      Subscription: {
         select: {
-          stripeCustomerId: true
+          status: true
         }
       }
     }
